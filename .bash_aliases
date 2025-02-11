@@ -1,3 +1,4 @@
+
 # Git Aliases
 alias gst='git status'
 alias gps='git push'
@@ -14,7 +15,7 @@ alias v='vim'
 
 # Move up/back some number of directories
 # up 2 -> cd ../..
-up() { cd $(eval printf '../'%.0s {1..$1}); }
+up() { cd "$(eval printf '../'%.0s "{1..$1}")" || exit; }
 alias ..='up 1'
 
 # Utils
